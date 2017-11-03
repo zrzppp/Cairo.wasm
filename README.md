@@ -21,7 +21,7 @@ Travis was configured for CI, and test coverage is reported to Coveralls for Jav
 Make sure to clone the repo recursively, in order to get the Google Test framework.
 
 ```
-git clone --recursive https://github.com/DanRuta/webassembly-workflow.git
+git clone --recursive https://github.com/AVJscript/webassembly-workflow.git
 ```
 
 When finished, run ```npm run build```. This will build the project into a build folder, and it will also install all the npm dependencies.
