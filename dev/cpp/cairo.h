@@ -39,7 +39,6 @@
 #define CAIRO_H
 
 #include "cairo-version.h"
-#include "cairo-features.h"
 #include "cairo-deprecated.h"
 
 #ifdef  __cplusplus

@@ -24,7 +24,7 @@ module.exports = grunt => {
         },
 
         exec: {
-            build: "C:/emsdk/emsdk_env.bat & echo Building... & emcc -o ./dist/appWASM.js ./dev/cpp/emscripten.cpp -O3 -s ALLOW_MEMORY_GROWTH=1 -s WASM=1 -s NO_EXIT_RUNTIME=1 -std=c++1z"
+            build: "/Users/ckimchris/Documents/Code/emsdk/emsdk_env.sh & echo Building... & emcc -o ./dist/appWASM.js ./dev/cpp/emscripten.cpp -O3 -s ALLOW_MEMORY_GROWTH=1 -s WASM=1 -s NO_EXIT_RUNTIME=1 -std=c++1z"
         },
 
         watch: {

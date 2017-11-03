@@ -3,7 +3,7 @@
 #include "cairo-deprecated.h"
 #include "cairo.h"
 #include "util.cpp"
-#include "mockExamples.cpp"
+// #include "mockExamples.cpp"
 
 Main::Main () {
     printf("[WASM] - New Main\n");
