@@ -9,7 +9,7 @@
 Make sure to clone the repo recursively, in order to get the Google Test framework.
 
 ```
-git clone --recursive https://github.com/AWSM-WASM/webassembly-workflow.git
+git clone --recursive https://github.com/AWSM-WASM/Cairo.wasm.git
 ```
 
 When finished, run ```npm run build```. This will build the project into a build folder, and it will also install all the npm dependencies.
