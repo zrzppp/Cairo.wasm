@@ -7,14 +7,7 @@ class Main {
         if (module==undefined) {
             throw new Error("No WASM module provided")
         }
-
         this.module = module
-        this.multTwo = this.module.cwrap("multTwo", ["number"], ["number", "number"])
-    }
-
-    addFour (a, b, c, d) {
-        const e = this.module.ccall("addTwo", ["number"], ["number", "number"], [a, b])
-        return this.module.ccall("addThree", ["number"], ["number", "number", "number"], [c, d, e])
     }
 }
 
@@ -25,10 +18,6 @@ class Util {
 
     static addTwo (a, b) {
         return a + b
-    }
-
-    static addThree (a, b, c) {
-        return a + b + c
     }
 }
 

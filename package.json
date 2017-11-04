@@ -1,5 +1,5 @@
 {
-  "name": "webassembly-workflow",
+  "name": "Cairo.wasm",
   "version": "1.0.0",
   "description": "A WebAssembly shell project, set up with task runners, testing and CI for JS and C++",
   "scripts": {
@@ -8,13 +8,15 @@
     "cpp-tests": "cd ./build && make && cpp-tests",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "coveralls": "npm run coverage -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
-    "build": "rm -rf build && mkdir build && cd build && cmake .. && npm install"
+    "build": "rm -rf build && mkdir build && cd build && cmake .. && npm install",
+    "compile": "source ../emsdk_env.sh --build=Release & echo Building... & emcc -o ./dist/appWASM.js ./dev/cpp/emscripten.cpp -O3 -s ALLOW_MEMORY_GROWTH=1 -s WASM=1 -s NO_EXIT_RUNTIME=1 -std=c++1z",
+    "start": "node server.js"
   },
 
   
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DanRuta/webassembly-workflow.git"
+    "url": "git+https://github.com/AWSM-WASM/Cairo.wasm.git"
   },
   "keywords": [],
   "main": "dist/app.min.js",
@@ -22,12 +24,12 @@
   "license": "MIT",
   "directories": {},
   "bugs": {
-    "url": "https://github.com/DanRuta/webassembly-workflow/issues"
+    "url": "https://github.com/AWSM-WASM/Cairo.wasm.git/issues"
   },
   "engines": {
     "node": ">= 8.4.0"
   },
-  "homepage": "https://github.com/DanRuta/webassembly-workflow#readme",
+  "homepage": "https://github.com/AWSM-WASM/Cairo.wasm#readme",
   "devDependencies": {
     "chai": "3.5.0",
     "coveralls": "^2.13.1",

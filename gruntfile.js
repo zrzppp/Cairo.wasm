@@ -23,14 +23,10 @@ module.exports = grunt => {
             }
         },
 
-        exec: {
-            build: "/Users/ckimchris/Documents/Code/emsdk/emsdk_env.sh & echo Building... & emcc -o ./dist/appWASM.js ./dev/cpp/emscripten.cpp -O3 -s ALLOW_MEMORY_GROWTH=1 -s WASM=1 -s NO_EXIT_RUNTIME=1 -std=c++1z"
-        },
-
         watch: {
             cpp: {
                 files: ["dev/cpp/*.cpp", "dev/cpp/*.h"],
-                tasks: ["exec:build", "uglify"]
+                tasks: ["uglify"]
             },
             js: {
                 files: ["dev/js/*.js"],
@@ -42,7 +38,6 @@ module.exports = grunt => {
     grunt.loadNpmTasks("grunt-contrib-watch")
     grunt.loadNpmTasks('grunt-contrib-concat')
     grunt.loadNpmTasks('grunt-contrib-uglify')
-    grunt.loadNpmTasks("grunt-exec")
 
     grunt.registerTask("default", ["watch"])
 }
